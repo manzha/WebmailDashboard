@@ -1,0 +1,2 @@
+class VirtualDomain < ApplicationRecord
+end

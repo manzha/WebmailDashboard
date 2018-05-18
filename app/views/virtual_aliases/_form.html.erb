@@ -1,0 +1,32 @@
+<%= form_with(model: virtual_alias, local: true) do |form| %>
+  <% if virtual_alias.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(virtual_alias.errors.count, "error") %> prohibited this virtual_alias from being saved:</h2>
+
+      <ul>
+      <% virtual_alias.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :virtual_domain_id %>
+    <%= form.text_field :virtual_domain_id, id: :virtual_alias_virtual_domain_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source, id: :virtual_alias_source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_field :destination, id: :virtual_alias_destination %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

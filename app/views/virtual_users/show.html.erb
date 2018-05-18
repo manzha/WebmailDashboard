@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Virtual domain:</strong>
+  <%= @virtual_user.virtual_domain %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @virtual_user.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @virtual_user.email %>
+</p>
+
+<%= link_to 'Edit', edit_virtual_user_path(@virtual_user) %> |
+<%= link_to 'Back', virtual_users_path %>

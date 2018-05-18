@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  virtual_domain: one
+  source: MyString
+  destination: MyString
+
+two:
+  virtual_domain: two
+  source: MyString
+  destination: MyString

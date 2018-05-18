@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Virtual domain:</strong>
+  <%= @virtual_alias.virtual_domain %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @virtual_alias.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @virtual_alias.destination %>
+</p>
+
+<%= link_to 'Edit', edit_virtual_alias_path(@virtual_alias) %> |
+<%= link_to 'Back', virtual_aliases_path %>

@@ -1,0 +1,22 @@
+<%= form_with(model: virtual_domain, local: true) do |form| %>
+  <% if virtual_domain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(virtual_domain.errors.count, "error") %> prohibited this virtual_domain from being saved:</h2>
+
+      <ul>
+      <% virtual_domain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :virtual_domain_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
