@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20180518033637) do
 
   create_table "virtual_users", force: :cascade do |t|
     t.integer "virtual_domain_id"
-    t.string "password"
+    t.string "password_digest"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

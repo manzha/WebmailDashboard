@@ -2,7 +2,7 @@ class CreateVirtualUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :virtual_users do |t|
       t.references :virtual_domain, foreign_key: true
-      t.string :password
+      t.string :password_digest
       t.string :email
 
       t.timestamps
