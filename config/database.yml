@@ -20,6 +20,16 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+staging:
+  <<: *default
+  database: webmaildashboard_staging
+  username: deploy
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: webmaildashboard_production
+  username: deploy
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+  # <<: *default
+  # database: db/production.sqlite3

@@ -6,7 +6,12 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
+role :app,  %w{deploy@165.227.179.4}
+role :web,  %w{deploy@165.227.179.4}
+role :db,   %w{deploy@165.227.179.4},   :primary => true
+set :branch,    "master"
+set :rails_env, "staging"
+set :deploy_to, "/var/www/webmaildashboard_staging"
 
 
 # role-based syntax

@@ -1,16 +1,16 @@
 # Load DSL and set up stages
 require "capistrano/setup"
 
-# Include default deployment tasks
+# # Include default deployment tasks
 require "capistrano/deploy"
 
 require 'capistrano/rails'
-require 'capistrano/bundler'
-require 'capistrano/rvm'
-require 'capistrano/puma'
+# require 'capistrano/bundler'
+# require 'capistrano/rvm'
+# require 'capistrano/puma'
 
-# Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+# # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
+# Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -34,13 +34,13 @@ Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 #
-# require "capistrano/rvm"
+require "capistrano/rvm"
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
-# require "capistrano/bundler"
-# require "capistrano/rails/assets"
-# require "capistrano/rails/migrations"
-# require "capistrano/passenger"
+require "capistrano/bundler"
+require "capistrano/rails/assets"
+require "capistrano/rails/migrations"
+require "capistrano/passenger"
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
-# Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
