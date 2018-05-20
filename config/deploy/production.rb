@@ -11,7 +11,7 @@ role :web,  %w{deploy@165.227.179.4}
 role :db,   %w{deploy@165.227.179.4},   :primary => true
 set :branch,    "master"
 set :rails_env, "staging"
-set :deploy_to, "/var/www/webmaildashboard_staging"
+set :deploy_to, "/var/www/wbdash.bcsi.com.mx"
 
 
 # role-based syntax
