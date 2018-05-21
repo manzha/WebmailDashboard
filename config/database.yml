@@ -25,11 +25,13 @@ staging:
   database: webmaildashboard_staging
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
+  adapter: mysql2
 
 production:
   <<: *default
   database: webmaildashboard_production
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
+  adapter: mysql2
   # <<: *default
   # database: db/production.sqlite3
