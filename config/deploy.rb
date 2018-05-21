@@ -7,6 +7,10 @@ set :repo_url, "git@github.com:manzha/WebmailDashboard.git"
 set :user,            'deploy'
 set :stages,  %w(production staging)
 
+# set :deploy_to, '/var/www/my-app-name'
+# set :use_sudo, true
+# set :branch, 'master' #or whichever branch you want to use
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
