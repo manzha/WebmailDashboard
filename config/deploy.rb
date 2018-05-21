@@ -88,7 +88,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 #   before :start, :make_dirs
 # end
 
-# namespace :deploy do
+namespace :deploy do
 #   desc "Make sure local git is in sync with remote."
 #   task :check_revision do
 #     on roles(:app) do
@@ -117,9 +117,9 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 
 #   before :starting,     :check_revision
 #   after  :finishing,    :compile_assets
-#   after  :finishing,    :cleanup
-#   after  :finishing,    :restart
-# end
+  after  :finishing,    :cleanup
+  after  :finishing,    :restart
+end
 
 # # ps aux | grep puma    # Get puma pid
 # # kill -s SIGUSR2 pid   # Restart puma
