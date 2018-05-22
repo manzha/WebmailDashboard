@@ -26,6 +26,7 @@ staging:
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
   adapter: mysql2
+  socket: /var/run/mysqld/mysqld.sock 
 
 production:
   <<: *default
@@ -33,5 +34,6 @@ production:
   username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
   adapter: mysql2
+  socket: /var/run/mysqld/mysqld.sock 
   # <<: *default
   # database: db/production.sqlite3
