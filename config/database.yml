@@ -23,14 +23,14 @@ test:
 staging:
   <<: *default
   database: webmaildashboard_staging
-  username: root
+  username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
   adapter: mysql2
 
 production:
   <<: *default
   database: webmaildashboard_production
-  username: root
+  username: deploy
   password: <%= ENV["DATABASE_PASSWORD"] %>
   adapter: mysql2
   # <<: *default
